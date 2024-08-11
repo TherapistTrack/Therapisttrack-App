@@ -6,11 +6,12 @@
 
 <div align = "center">
 <h5 align = "center">Build with</h5>
-<img align="center" alt="Java" width="40px" style="padding-right:20px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original-wordmark.svg" />
-<img align="center" alt="Java" width="40px" style="padding-right:20px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
-<img align="center" alt="Java" width="40px" style="padding-right:20px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
+<img align="center" alt="Java" width="40px" style="padding-right:20px; padding-bottom:20px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original-wordmark.svg" />
+<img align="center" alt="Java" width="40px" style="padding-right:20px; padding-bottom:20px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
+<img align="center" alt="Java" width="40px" style="padding-right:20px; padding-bottom:20px" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" />
 </div>
 
+---
 
 This repository contains all the setup files to start up and run therapisttrack with the docker images hosted on dockerhub.
 

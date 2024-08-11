@@ -1,0 +1,50 @@
+name: therapisttrack
+
+services:
+  database:
+    image: therapisttrackapp/tt-db-dev:latest
+    ports:
+      - '${DB_PORT}:27017'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: '${DB_ADMIN_USER}'
+      MONGO_INITDB_ROOT_PASSWORD: '${DB_ADMIN_PASSWORD}'
+      MONGO_INITDB_DATABASE: '${DB_NAME}'
+      DB_NAME: '$DB_NAME'
+      DB_USER: '$DB_USER'
+      DB_USER_PASSWORD: '$DB_USER_PASSWORD'
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    image: therapisttrackapp/tt-backend-dev:latest
+    ports:
+      - '${API_PORT}:${API_PORT}'
+    environment:
+      DB_HOST: '${DB_HOST}'
+      DB_NAME: '${DB_NAME}'
+      DB_USER: '${DB_USER}'
+      DB_USER_PASSWORD: '${DB_USER_PASSWORD}'
+      DB_PORT: '${DB_PORT}'
+      JWT_SECRET: '${JWT_SECRET}'
+      API_PORT: '${API_PORT}'
+      DELAY_START: '${DELAY_START}'
+      LOGGING_METHOD: '${LOGGING_METHOD}'
+      LOGGING_FILE_PATH: '${LOGGING_FILE_PATH}'
+    volumes:
+      - backend_logs:/backend/logs
+
+  frontend:
+    image: therapisttrackapp/tt-frontend-dev:latest
+    ports:
+      - "${FRONTEND_PORT}:${FRONTEND_PORT}"
+    environment:
+      FRONTEND_PORT : '${FRONTEND_PORT}'
+      BACKEND_URI: '${BACKEND_URI}'
+      VITE_BASE: '${VITE_BASE}'
+
+volumes:
+  mongo_data:
+    driver: local
+  backend_logs:
+    driver: local
+    

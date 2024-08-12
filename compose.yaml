@@ -1,6 +1,14 @@
 name: therapisttrack
 
 services:
+  
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 45
+    restart: always
+
   database:
     image: therapisttrackapp/tt-db-dev:latest
     ports:

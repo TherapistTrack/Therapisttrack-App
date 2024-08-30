@@ -51,7 +51,7 @@ services:
       - "${FRONTEND_PORT}:${FRONTEND_PORT}"
     environment:
       FRONTEND_PORT : '${FRONTEND_PORT}'
-      BACKEND_URI: '${BACKEND_URI}'
+      BACKEND_URI: '${VITE_BACKEND_URI}'
       VITE_BASE: '${VITE_BASE}'
       VITE_TEST_PORT: '${VITE_TEST_PORT}'
       VITE_OAUTH_DOMAIN: '${VITE_OAUTH_DOMAIN}'

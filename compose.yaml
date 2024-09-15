@@ -1,18 +1,18 @@
 name: therapisttrack
 
 services:
-  
+
   watchtower:
     image: containrrr/watchtower
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
     command: --interval 45
     restart: always
 
   database:
     image: therapisttrackapp/tt-db-dev:latest
-    ports:
-      - '${DB_PORT}:27017'
+    #ports:
+    #  - '127.0.0.1:${DB_PORT}:27017'
     environment:
       MONGO_INITDB_ROOT_USERNAME: '${DB_ADMIN_USER}'
       MONGO_INITDB_ROOT_PASSWORD: '${DB_ADMIN_PASSWORD}'
@@ -25,8 +25,8 @@ services:
 
   backend:
     image: therapisttrackapp/tt-backend-dev:latest
-    ports:
-      - '${API_PORT}:${API_PORT}'
+    #    ports:
+    #  - '${API_PORT}:${API_PORT}'
     environment:
       DB_HOST: '${DB_HOST}'
       DB_NAME: '${DB_NAME}'
@@ -51,8 +51,8 @@ services:
 
   frontend:
     image: therapisttrackapp/tt-frontend-dev:latest
-    ports:
-      - "${FRONTEND_PORT}:${FRONTEND_PORT}"
+    #ports:
+    #  - "${FRONTEND_PORT}:${FRONTEND_PORT}"
     environment:
       FRONTEND_PORT : '${FRONTEND_PORT}'
       BACKEND_URI: '${VITE_BACKEND_URI}'
@@ -69,4 +69,4 @@ volumes:
     driver: local
   backend_logs:
     driver: local
-    
+

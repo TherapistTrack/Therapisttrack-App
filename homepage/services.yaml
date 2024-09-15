@@ -1,0 +1,44 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/services
+
+- Public:
+    - Web:
+        icon: https://raw.githubusercontent.com/TherapistTrack/TherapistTrack-Frontend/main/src/assets/Logo/LogoSoloColor.png
+        href: https://therapisttrack.name
+        description: Dev web page
+        ping: therapisttrack.name
+    - API:
+        icon: https://raw.githubusercontent.com/TherapistTrack/TherapistTrack-Frontend/main/src/assets/Logo/LogoSoloColor.png
+        href: https://api.therapisttrack.name/health
+        description: App API
+        ping: api.therapisttrack.name
+
+- Private:
+    - Uptime Kuma:
+        icon: https://raw.githubusercontent.com/louislam/uptime-kuma/master/public/icon.svg
+        href: http://status.therapisttrack.name
+        description: Services Status Monitor
+        ping: uptime-kuma
+        container: uptime-kuma
+        widget:
+          type: uptimekuma
+          url: http://uptime-kuma:3001
+          slug: therapisttrack
+    - Nginx Proxy Manager:
+        icon: https://raw.githubusercontent.com/NginxProxyManager/nginx-proxy-manager/develop/docs/src/public/icon.png
+        href: http://proxy.therapisttrack.name
+        description: Proxy manager
+        container: proxy-manager-proxy-1
+        ping: proxy
+    - Portainer:
+        icon: si-portainer-#13bef9
+        href: http://docker.therapisttrack.name
+        description: Docker container manager
+        container: portainer
+        ping: portainer
+    - Database:
+        icon: si-mongodb-#47a248
+        href: http://db-private.therapisttrack.name
+        description: Current API live database
+        ping: database

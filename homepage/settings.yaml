@@ -1,0 +1,16 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/settings
+
+title: Therapisttrack
+headerStyle: boxed
+base: https://homepage.therapisttrack.name
+layout:
+  Public:
+    style: row
+    columns: 2
+  Private:
+    style: row
+    columns: 2
+useEqualHeights: true
+

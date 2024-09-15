@@ -1,0 +1,47 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/bookmarks
+
+- Source Code:
+    - App:
+        - icon: si-github-#ffffff
+          href: https://github.com/TherapistTrack/Therapisttrack-App
+    - Frontend:
+        - icon: si-github-#ffffff
+          href: https://github.com/TherapistTrack/TherapistTrack-Frontend
+    - Backend:
+        - icon: si-github-#ffffff
+          href: https://github.com/TherapistTrack/TherapistTrack-Backend
+    - Database:
+        - icon: si-github-#ffffff
+          href: https://github.com/TherapistTrack/TherapistTrack-DB
+    - Docker:
+        - icon: si-docker-#2496ed
+          href: https://hub.docker.com/u/therapisttrackapp
+
+- Documentation:
+    - API:
+        - icon: https://avatars.githubusercontent.com/u/32099856?s=200&v=4
+          href: https://kind-eagle-83.redoc.ly
+          description: api official documentation
+- Providers:
+    - Cloudflare:
+        - icon: si-cloudflare-#f38020
+          href: https://www.cloudflare.com
+          description: proxy and DNS
+    - Sever4You:
+        - icon: si-serverless-#e43526
+          href: https://www.cloudflare.com
+          description: Virtual private server
+    - Auth0:
+        - icon: si-auth0-#eb5424
+          href: https://auth0.com
+          description: Authentication and authorization
+    - Tailscale:
+        - icon: si-tailscale
+          href: https://tailscale.com
+          description: VPN net
+    - NameCheap:
+        - icon: si-namecheap-#de3723
+          href: https://www.namecheap.com
+          description: DNS registrar

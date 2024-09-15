@@ -5,7 +5,7 @@ services:
   watchtower:
     image: containrrr/watchtower
     volumes:
-        - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock
     command: --interval 45
     restart: always
 
@@ -22,6 +22,8 @@ services:
       DB_USER_PASSWORD: '$DB_USER_PASSWORD'
     volumes:
       - mongo_data:/data/db
+    networks:
+      - proxy
 
   backend:
     image: therapisttrackapp/tt-backend-dev:latest
@@ -48,6 +50,8 @@ services:
       AUTH_CLIENT_SECRET: '${AUTH_CLIENT_SECRET}'
     volumes:
       - backend_logs:/backend/logs
+    networks:
+      - proxy
 
   frontend:
     image: therapisttrackapp/tt-frontend-dev:latest
@@ -63,10 +67,14 @@ services:
       VITE_OAUTH_REDIRECT_URI: '${VITE_OAUTH_REDIRECT_URI}'
       VITE_OAUTH_LOGOUT_URI: '${VITE_OAUTH_LOGOUT_URI}'
       VITE_FREE_NAVIGATION: '${VITE_FREE_NAVIGATION}'
+    networks:
+      - proxy
 
 volumes:
   mongo_data:
     driver: local
   backend_logs:
     driver: local
-
+networks:
+  proxy:
+    external: true

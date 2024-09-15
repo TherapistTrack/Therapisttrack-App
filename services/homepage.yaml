@@ -1,0 +1,15 @@
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+
+    volumes:
+      - /home/services/Therapisttrack-App/homepage:/app/config # Make sure your local config directory exists
+      - /home/services/Therapisttrack-App/icons:/app/public/icons
+      - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
+    networks:
+      - proxy
+      
+networks:
+  proxy:
+    external: true

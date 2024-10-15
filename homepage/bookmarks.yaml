@@ -24,10 +24,14 @@
         - icon: https://avatars.githubusercontent.com/u/32099856?s=200&v=4
           href: https://kind-eagle-83.redoc.ly
           description: api official documentation
-    - Tests:
+    - Integration and UX tests:
         - icon: si-googlesheets-#34a853
           href: https://docs.google.com/spreadsheets/d/1TYfOQVtW7nvJ3z35taRGR6HnKBfx6OYYMwrvA8fLsUU/edit?usp=sharing
-          description: api official documentation
+          description: Test Status
+    - Stress and Load tests:
+        - icon: si-grafana-#f46800
+          href: https://therapisttrack.grafana.net/login
+          description: Test Status
 - Providers:
     - Cloudflare:
         - icon: si-cloudflare-#f38020
@@ -35,7 +39,7 @@
           description: proxy and DNS
     - Sever4You:
         - icon: si-serverless-#e43526
-          href: https://www.cloudflare.com
+          href: https://www.server4you.com
           description: Virtual private server
     - Auth0:
         - icon: si-auth0-#eb5424

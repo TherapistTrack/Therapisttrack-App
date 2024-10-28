@@ -15,7 +15,7 @@
 
 This repository contains all the setup files to start up and run therapisttrack with the docker images hosted on dockerhub.
 
-You may be interested on the repos this is based on:
+The following repos contain the source code of the project:
 
 [🔴  TT-Frontend ](https://github.com/TherapistTrack/TherapistTrack-Frontend)
 
